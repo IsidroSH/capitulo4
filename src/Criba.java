@@ -17,10 +17,7 @@ public class Criba
             cribaNumeros(dim, esPrimo);
 // ¿Cuántos primos hay?
             int cuenta = 0;
-            for (i=0; i<dim; i++) {
-                if (esPrimo[i])
-                    cuenta++;
-            }
+            cuenta = getCuenta(dim, esPrimo, cuenta);
 // Rellenar el vector de números primos
             int[] primos = new int[cuenta];
             for (i=0, j=0; i<dim; i++) {
@@ -32,6 +29,15 @@ public class Criba
             return new int[0];
 // Vector vacío
         }
+    }
+
+    private static int getCuenta(int dim, boolean[] esPrimo, int cuenta) {
+        int i;
+        for (i=0; i< dim; i++) {
+            if (esPrimo[i])
+                cuenta++;
+        }
+        return cuenta;
     }
 
     private static void cribaNumeros(int dim, boolean[] esPrimo) {

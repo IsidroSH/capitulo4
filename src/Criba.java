@@ -1,7 +1,18 @@
 import java.util.Scanner;
+/**
+ * Clase Criba:
+ * Genera todos los números primos de 1 hasta un número máximo especificado por el usuario
+ * @author IsidroSH
+ * @version 1.0
+ */
+
 public class Criba
 {
-    // Generar números primos de 1 a max
+    /** Función que genera números primos de 1 a max
+     * /
+     * @param max
+     * @return Matriz con los numeros primos existentes
+     */
     public static int[] generarPrimos (int max)
     {
         int i,j;
@@ -28,6 +39,12 @@ public class Criba
         }
     }
 
+    /** Función que genera el array con los numeros primos que han salido
+     *
+     * @param dim
+     * @param esPrimo
+     * @param primos
+     */
     private static void arrayNumPrimos(int dim, boolean[] esPrimo, int[] primos) {
         int i;
         int j;
@@ -37,6 +54,13 @@ public class Criba
         }
     }
 
+    /** Función que cuenta cuantos numero primos han salido
+     *
+     * @param dim
+     * @param esPrimo
+     * @param cuenta
+     * @return el numero de numeros primos existentes
+     */
     private static int getCuenta(int dim, boolean[] esPrimo, int cuenta) {
         int i;
         for (i=0; i< dim; i++) {
@@ -46,6 +70,11 @@ public class Criba
         return cuenta;
     }
 
+    /** Función donde se hace la criba de cuales son numeros primos y cuales no
+     *
+     * @param dim
+     * @param esPrimo
+     */
     private static void cribaNumeros(int dim, boolean[] esPrimo) {
         int i;
         int j;
@@ -58,6 +87,11 @@ public class Criba
         }
     }
 
+    /** Función que inicializa el array con todos los valores verdaderos
+     * 
+     * @param dim
+     * @param esPrimo
+     */
     private static void inicializacionArray(int dim, boolean[] esPrimo) {
         int i;
         for (i=0; i< dim; i++)

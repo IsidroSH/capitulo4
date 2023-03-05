@@ -45,7 +45,7 @@ public class Criba
      * @param esPrimo
      * @param primos
      */
-    private static void arrayNumPrimos(int dim, boolean[] esPrimo, int[] primos) {
+    public static void arrayNumPrimos(int dim, boolean[] esPrimo, int[] primos) {
         int i;
         int j;
         for (i=0, j=0; i< dim; i++) {
@@ -61,7 +61,7 @@ public class Criba
      * @param cuenta
      * @return el numero de numeros primos existentes
      */
-    private static int getCuenta(int dim, boolean[] esPrimo, int cuenta) {
+    public static int getCuenta(int dim, boolean[] esPrimo, int cuenta) {
         int i;
         for (i=0; i< dim; i++) {
             if (esPrimo[i])
@@ -75,7 +75,7 @@ public class Criba
      * @param dim
      * @param esPrimo
      */
-    private static void cribaNumeros(int dim, boolean[] esPrimo) {
+    public static void cribaNumeros(int dim, boolean[] esPrimo) {
         int i;
         int j;
         for (i=2; i<Math.sqrt(dim)+1; i++) {
@@ -88,11 +88,11 @@ public class Criba
     }
 
     /** Función que inicializa el array con todos los valores verdaderos
-     * 
+     *
      * @param dim
      * @param esPrimo
      */
-    private static void inicializacionArray(int dim, boolean[] esPrimo) {
+    public static void inicializacionArray(int dim, boolean[] esPrimo) {
         int i;
         for (i=0; i< dim; i++)
             esPrimo[i] = true;

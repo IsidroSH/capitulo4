@@ -20,14 +20,20 @@ public class Criba
             cuenta = getCuenta(dim, esPrimo, cuenta);
 // Rellenar el vector de números primos
             int[] primos = new int[cuenta];
-            for (i=0, j=0; i<dim; i++) {
-                if (esPrimo[i])
-                    primos[j++] = i;
-            }
+            arrayNumPrimos(dim, esPrimo, primos);
             return primos;
         } else { // max < 2
             return new int[0];
 // Vector vacío
+        }
+    }
+
+    private static void arrayNumPrimos(int dim, boolean[] esPrimo, int[] primos) {
+        int i;
+        int j;
+        for (i=0, j=0; i< dim; i++) {
+            if (esPrimo[i])
+                primos[j++] = i;
         }
     }
 
